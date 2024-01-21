@@ -1,0 +1,31 @@
+
+<div>
+    <h2>llene los siguientes Datos </h2>
+    <form #formulario="ngForm" (submit)="calcularViaje(formulario.value)">
+    <div>
+      <label>Distancia en kilómetros hacia su Destino</label>
+      <input name="distancia" type="number" ngModel/>
+    </div>
+    
+    <div>
+      <label>Kilometros estipulados para recorrer:</label>
+      <input name="kmPorGalon" type="number" ngModel/>
+    </div>
+    
+    <div>
+      <label>Precio por galón del combustible:</label>
+      <input name="costoGalon" type="number" ngModel/>
+    </div>
+    
+    <div>
+      <label>Precio de cada peaje:</label>
+      <input name="costoPeaje" type="number"ngModel />
+    </div>
+  
+    <input type="submit" value="enviar">
+    </form>
+
+  @if(resultado){
+    <app-calculo-viaje [resultado]= 'resultado' ></app-calculo-viaje>
+
+  }

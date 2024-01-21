@@ -1,0 +1,8 @@
+<div>
+    <h2>Conclusion de Traslado </h2>
+    <p>Valor total {{ resultado.costoTotal }}</p>
+    <p>Tiempo Estimado {{ resultado.duracion }} horas</p>
+    @if (resultado.advertenciaDescanso) {
+      <p> ¡Advertencia! Se Recomienda Descansar ya que el viaje dura mas de 12 horas</p>
+    }
+  </div>
